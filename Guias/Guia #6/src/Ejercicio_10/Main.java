@@ -27,42 +27,48 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        /*Variables Auxiliares*/
-        int auxMayor = 0;
-        int auxMenor = 0;
-
-        /*Contador*/
-        int contMayor = 1;
-        int contMenor = 1;
-
         System.out.print("Tamanio del arreglo: ");
         int tam = in.nextInt();
 
         int[] Numero = new int[tam];
 
-        for (int i = 0; i < tam; i++) {
-            System.out.print("Numero [" + i + "]: ");
+        for (int i = 0; i < Numero.length; i++) {
+            System.out.print("Numero [" + (i+1) + "]: ");
             Numero[i] = in.nextInt();
-
-            if (Numero[i] > auxMayor) {
-                auxMayor = Numero[i];
-
-                if (Numero[i] == auxMayor) {
-                    contMayor++;
-                }
-
+        }
+        
+        int Mayor = Numero[0]; //Mayor por defecto
+        int Menor = Numero[0]; //Menor por defecto
+        int num = 0;
+        
+        for(int i = 0; i < Numero.length; i++){
+            num = Numero[i];
+            
+            if(num > Mayor){ // ¿actual numero es mayor al "mayor" que tengo almacenado?
+                Mayor = num; // si es mayor reemplazar, ahora tengo un nuevo mayor
             }
-
-            if (Numero[i] < auxMenor) {
-                auxMenor = Numero[i];
-                //contMenor = (Numero[i] == auxMenor) ? contMenor++ : contMenor;
-                if (Numero[i] == auxMenor) {
-                    contMenor++;
-                }
+            
+            if(num < Menor){ // ¿actual numero es menor al "menor" que tengo almacenado?
+                Menor = num; //si es menor reemplazar, ahora tengo un nuevo menor
+            }
+        }
+        
+        int contMayor = 0;
+        int contMenor = 0;
+        
+        for(int i = 0; i < Numero.length; i++){
+            num = Numero[i];
+            
+            if(num == Mayor){
+                contMayor++;
+            }
+            
+            if(num == Menor){
+                contMenor++;
             }
         }
 
-        System.out.println("El mayor es: " + auxMayor + " y se repite " + contMayor + " veces");
-        System.out.println("El menor es: " + auxMenor + " y se repite " + contMenor + " veces");
+        System.out.println("El mayor es: " + Mayor + " y se repite " + contMayor + " veces");
+        System.out.println("El menor es: " + Menor + " y se repite " + contMenor + " veces");
     }
 }

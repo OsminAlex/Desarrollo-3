@@ -76,7 +76,7 @@ public class Abstracto {
 
         Scanner in = new Scanner(System.in);
 
-        /*Variable*/
+        /*Variables*/
         String Nombre;
         int edad;
         int id;
@@ -87,7 +87,7 @@ public class Abstracto {
         System.out.println("Estudiante\n");
 
         //try {
-        System.out.print("Nombre: ");
+        System.out.print("\nNombre: ");
         Nombre = in.nextLine();
         Alumno.Nombre = Nombre;
         /*} catch (IllegalArgumentException exec) {
@@ -97,23 +97,22 @@ public class Abstracto {
         }*/
 
         try {
-            System.out.print("Edad: ");
+            System.out.print("\nEdad: ");
             edad = in.nextInt();
-
             Alumno.Edad = edad;
         } catch (InputMismatchException exec) {
-            System.out.println("No es un valor numerico.");
+            System.out.println("\n\tNo es un valor numerico.");
         }
         /*finally {
             System.out.println("ERROR: Programa terminado.");
         }*/
 
         try {
-            System.out.print("ID: ");
+            System.out.print("\nID: ");
             id = in.nextInt();
             Alumno.ID = id;
         } catch (InputMismatchException exec) {
-            System.out.println("No es un valor numerico.");
+            System.out.println("\n\tNo es un valor numerico.");
         }
         /*finally {
             System.out.println("ERROR: Programa terminado.");
@@ -136,23 +135,23 @@ public class Abstracto {
         }*/
 
         try {
-            System.out.print("Edad: ");
+            System.out.print("\nEdad: ");
             edad = in.nextInt();
 
             Profe.Edad = edad;
         } catch (InputMismatchException exec) {
-            System.out.println("No es un valor numerico.");
+            System.out.println("\n\tNo es un valor numerico.");
         }
         /*finally {
             System.out.println("ERROR: Programa terminado.");
         }*/
 
         try {
-            System.out.print("Salario: ");
+            System.out.print("\nSalario: ");
             salario = in.nextInt();
             Profe.Salario = salario;
         } catch (InputMismatchException exec) {
-            System.out.println("No es un valor numerico.");
+            System.out.println("\n\tNo es un valor numerico.");
         }
         /*finally {
             System.out.println("ERROR: Programa terminado.");

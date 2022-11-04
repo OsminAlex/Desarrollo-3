@@ -31,11 +31,11 @@ public class Main {
         }
 
         System.out.println("Numeros: \n");
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < Numeros.length; i++) {
             System.out.println("[" + i + "] " + Numeros[i]);
         }
 
-        System.out.println("El mayor es: " + aux);
+        System.out.println("\n\nEl mayor es: " + aux);
 
     }
 }

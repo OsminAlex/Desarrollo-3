@@ -47,7 +47,8 @@ class Jefe extends Empleado {
 
     @Override
     public void Imprimir() {
-        System.out.println("\n\nEl salario es: " + Salario);
+        System.out.println("\n\nNombre: " + Nombre + " " + Apellido);
+        System.out.println("\nEl salario del jefe es de: " + Salario);
     }
 }
 
@@ -58,12 +59,13 @@ class TrabajadorPorComision extends Empleado {
 
     @Override
     public void CalcularSalario() {
-        Salario = SalarioBase + (ventas * ((float)PorcentajeDeComision / 100));
+        Salario = SalarioBase + (ventas * ((float) PorcentajeDeComision / 100));
     }
 
     @Override
     public void Imprimir() {
-        System.out.println("\n\nEl salario es: " + Salario);
+        System.out.println("\n\nNombre: " + Nombre + " " + Apellido);
+        System.out.println("\nEl salario del trabajador por comision es de: " + Salario);
     }
 }
 
@@ -79,7 +81,8 @@ class TrabajadorPorDestajo extends Empleado {
 
     @Override
     public void Imprimir() {
-        System.out.println("\n\nEl salario es: " + Salario);
+        System.out.println("\n\nNombre: " + Nombre + " " + Apellido);
+        System.out.println("\nEl salario del trabajador por destajo es de: " + Salario);
     }
 }
 
@@ -102,7 +105,7 @@ public class Main {
 
         do {
             System.out.println("\n\n - - - Menu de Opciones - - -");
-            System.out.println("\n 1 - Jefe\n 2 - Trabajador por comision\n 3 - Trabajador por destajo");
+            System.out.println("\n 1 - Jefe\n 2 - Trabajador por comision\n 3 - Trabajador por destajo\n 9 - Salir");
             System.out.print("\n - - - > ");
             opc = in.nextInt();
 
